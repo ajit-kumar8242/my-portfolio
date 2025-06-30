@@ -3,32 +3,19 @@ import { motion } from "motion/react";
 
 const projects = [
   {
-    title: "Project One",
-    description: "A modern web application built with React and Node.js",
-    technologies: ["React", "Node.js", "MongoDB"],
-    link: "#",
-    image: "/images/bg.png",
-  },
-  {
-    title: "Project Two",
-    description: "An e-commerce platform with real-time inventory management",
-    technologies: ["TypeScript", "Next.js", "PostgreSQL"],
-    link: "#",
-    image: "/images/bg.png",
-  },
-  {
-    title: "Project Three",
-    description: "A data visualization dashboard for business analytics",
-    technologies: ["D3.js", "Python", "AWS"],
-    link: "#",
+    title: "Ecommerce website",
+    description:
+      "An e-commerce platform with real-time inventory management and an Admin Panel which deals with Orders and Manage Prouducts and a lot more",
+    technologies: ["JavaScript", "React", "Mongoose"],
+    link: "https://github.com/ajit-kumar8242",
     image: "/images/bg.png",
   },
 ];
 
-const Work = () => {
+const Project = () => {
   return (
     <section
-      id="work"
+      id="project"
       className="min-h-screen bg-primary-50 dark:bg-dark-900 py-20 transition-colors duration-200"
     >
       <div className="container mx-auto px-4">
@@ -41,7 +28,7 @@ const Work = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-mono">
             <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">
-              WORK
+              PROJECT
             </span>
           </h2>
 
@@ -63,7 +50,7 @@ const Work = () => {
                 </div>
 
                 <div className="p-6">
-                  <div className="relative w-full h-48 mb-6 overflow-hidden">
+                  <div className="relative w-full h-48 mb-6 overflow-hidden transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -80,7 +67,7 @@ const Work = () => {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="text-gray-600/40 dark:text-white/40 font-mono text-xs uppercase tracking-widest"
+                        className="text-gray-600/40 dark:text-white/40 font-mono text-xs uppercase tracking-widest font-extrabold"
                       >
                         {tech}
                       </span>
@@ -91,7 +78,7 @@ const Work = () => {
                     className="inline-block text-gray-800/80 dark:text-white/80 hover:text-gray-900 dark:hover:text-white font-mono text-sm uppercase tracking-widest"
                     whileHover={{ x: 5 }}
                   >
-                    View Project →
+                    {/*add github link */}
                   </motion.a>
                 </div>
               </motion.div>
@@ -103,4 +90,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Project;

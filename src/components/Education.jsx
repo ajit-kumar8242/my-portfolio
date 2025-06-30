@@ -1,36 +1,28 @@
 import React from "react";
 import { motion } from "motion/react";
-const blogPosts = [
+const EduPosts = [
   {
-    title: "Building a Modern Portfolio",
-    date: "March 15, 2024",
-    excerpt:
-      "A deep dive into creating a responsive portfolio with React and Tailwind CSS.",
+    title: "Master of Computer Applications (MCA)",
+    date: "2021-2023",
+    excerpt: "Alaggappa University",
+    cgpa: "CGPA:79",
     image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
+      "https://d2lk14jtvqry1q.cloudfront.net/media/large_1512_54f84e4f28_3356236c11.png",
   },
   {
-    title: "The Art of Clean Code",
-    date: "March 10, 2024",
-    excerpt:
-      "Exploring principles and practices for writing maintainable and efficient code.",
+    title: "Bachelor of Computer Applications (BCA)",
+    date: "2018-2021",
+    excerpt: "Vidhyaa Giri College of Arts and Science",
+    cgpa: "CGPA:84",
     image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-  },
-  {
-    title: "UI/UX Design Principles",
-    date: "March 5, 2024",
-    excerpt:
-      "Understanding the fundamentals of creating intuitive and engaging user interfaces.",
-    image:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjOc_OnjUDXbUVwXAXxL6Gb75nipA_7gApWEU9PeZlKbheT6JGc2qymLHsMMC5ZN0Ni10&usqp=CAU",
   },
 ];
 
-const Blog = () => {
+const Education = () => {
   return (
     <section
-      id="blog"
+      id="education"
       className="min-h-screen bg-primary-50 dark:bg-dark-900 py-20 transition-colors duration-200"
     >
       <div className="container mx-auto px-4">
@@ -43,12 +35,12 @@ const Blog = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-primary-900 dark:text-dark-50 mb-12 font-mono">
             <span className="border-b-2 border-primary-200 dark:border-dark-700 pb-2">
-              BLOG
+              EDUCATION
             </span>
           </h2>
 
           <div className="space-y-8">
-            {blogPosts.map((post, index) => (
+            {EduPosts.map((post, index) => (
               <motion.article
                 key={post.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -66,12 +58,14 @@ const Blog = () => {
 
                 <div className="p-6">
                   <div className="flex gap-6">
-                    <div className="w-1/3">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-48 object-cover rounded-lg"
-                      />
+                    <div className="w-1/3 transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0">
+                      {
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className={`w-full h-48 object-cover rounded-lg`}
+                        />
+                      }
                     </div>
                     <div className="w-2/3">
                       <div className="mb-4">
@@ -80,12 +74,15 @@ const Blog = () => {
                         </span>
                       </div>
 
-                      <h3 className="text-xl font-bold text-primary-900 dark:text-dark-50 mb-4 font-mono">
+                      <h3 className="text-2xl font-bold text-primary-900 dark:text-dark-50 mb-4 font-mono ">
                         {post.title}
                       </h3>
 
-                      <p className="text-primary-600/60 dark:text-dark-300/60 mb-6 font-mono text-sm">
+                      <p className="text-primary-600/60 dark:text-dark-300/60 mb-6 font-mono text-lg font-extrabold">
                         {post.excerpt}
+                      </p>
+                      <p className="text-primary-600/60 dark:text-dark-300/60 mb-6 font-mono text-lg font-extrabold">
+                        {post.cgpa}
                       </p>
 
                       <div className="flex items-center justify-end">
@@ -93,9 +90,7 @@ const Blog = () => {
                           href="#"
                           className="text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest"
                           whileHover={{ x: 5 }}
-                        >
-                          Read More →
-                        </motion.a>
+                        ></motion.a>
                       </div>
                     </div>
                   </div>
@@ -109,4 +104,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Education;

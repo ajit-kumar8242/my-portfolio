@@ -2,6 +2,11 @@ import React from "react";
 import { motion } from "motion/react";
 
 const HeroSection = () => {
+  const HeroLinks = [
+    { id: "project", label: "Project" },
+
+    { id: "contact", label: "Contact" },
+  ];
   // Smooth scroll function
   const smoothScrollTo = (targetId) => {
     const targetElement = document.getElementById(targetId);
@@ -96,20 +101,11 @@ const HeroSection = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="flex justify-center space-x-8"
           >
-            <motion.a
-              href="#work"
-              className="text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest"
-              whileHover={{ x: 5 }}
-            >
-              View Work →
-            </motion.a>
-            <motion.a
-              href="#contact"
-              className="text-primary-700/80 dark:text-dark-200/80 hover:text-primary-900 dark:hover:text-dark-50 font-mono text-sm uppercase tracking-widest"
-              whileHover={{ x: 5 }}
-            >
-              Contact →
-            </motion.a>
+            <h2 className="text-xl md:text-2xl text-primary-700/80 dark:text-dark-200/80 font-mono uppercase tracking-widest">
+              <span className="border-b border-primary-200 dark:border-dark-700 pb-1 ">
+                FRONTEND ENGINEER helping turn ideas into accessible experiences
+              </span>
+            </h2>
           </motion.div>
         </motion.div>
       </div>

@@ -4,20 +4,16 @@ import { motion } from "motion/react";
 const Contact = () => {
   const contactLinks = [
     {
-      text: "neelshha@gmail.com",
-      href: "mailto:neelshha@gmail.com",
+      text: "ajith8242@gmail.com",
+      href: "https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsLPwCQqCkwxLxGCCtDlKxBwXPsjLwhkbRwKLtpJZFRMcrxNpWtPPGGNcgnWFNSlVdNWbMFl",
     },
     {
       text: "GITHUB",
-      href: "https://github.com/neelshha/devfolio-vite.git",
+      href: "https://github.com/ajit-kumar8242",
     },
     {
       text: "LINKEDIN",
-      href: "https://linkedin.com/in/yourusername",
-    },
-    {
-      text: "INSTAGRAM",
-      href: "https://linkedin.com/in/yourusername",
+      href: "www.linkedin.com/in/ajit-kumar8242",
     },
   ];
 

@@ -3,8 +3,8 @@ import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import About from "./components/About";
-import Work from "./components/Work";
-import Blog from "./components/Blog";
+import Project from "./components/Project";
+import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Value from "./components/Value";
 
@@ -16,8 +16,8 @@ const App = () => {
         <div>
           <HeroSection />
           <About />
-          <Work />
-          <Blog />
+          <Project />
+          <Education />
           <Value />
           <Contact />
         </div>
